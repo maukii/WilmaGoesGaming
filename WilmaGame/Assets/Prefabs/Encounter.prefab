@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4301402629896468}
   - component: {fileID: 58292331405428258}
+  - component: {fileID: 58382110497774852}
   m_Layer: 0
   m_Name: Encounter
   m_TagString: Untagged
@@ -80,12 +81,27 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5.7295055
+--- !u!58 &58382110497774852
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1043230194384224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.5995822
 --- !u!95 &95922822372110308
 Animator:
   serializedVersion: 3
