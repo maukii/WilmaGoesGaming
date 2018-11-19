@@ -15,6 +15,11 @@ public class PlayerInteraction : MonoBehaviour
         {
             interactables.Add(other.gameObject);
         }
+
+        if(other.gameObject.GetComponent<Door>() != null)
+        {
+            other.gameObject.GetComponent<Door>().ChangeLevel(other.gameObject.GetComponent<Door>().levelIndexToLoad);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -29,7 +34,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (Input.GetKeyDown(actionKey) && interactables.Count != 0 && !PlayerMovement.interacting)
         {
-            // interact with object
+            // interact with objects
 
             for (int i = 0; i < interactables.Count; i++)
             {

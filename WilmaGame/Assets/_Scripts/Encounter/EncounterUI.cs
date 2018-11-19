@@ -20,7 +20,7 @@ public class EncounterUI : MonoBehaviour
     float tempTime;
 
     bool infoReady = false;
-    bool chosen = false;
+    public bool chosen = false;
 
     public Queue<string> sentences;
 
