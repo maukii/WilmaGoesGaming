@@ -5,6 +5,8 @@ using UnityEngine;
 public class AnimationScript : MonoBehaviour
 {
 
+    public bool debugWithSpace = true;
+
     public AnimationCurve PositionCurve;
     public AnimationCurve ScaleCurve;
 
@@ -19,6 +21,14 @@ public class AnimationScript : MonoBehaviour
     {
         //SetupVariables(); // mayabe use later
         StartEncounter();
+    }
+      
+    void Update()
+    {
+        if(debugWithSpace && Input.GetKeyDown(KeyCode.Space))
+        {
+            StartEncounter();
+        }
     }
 
     void SetupVariables()
