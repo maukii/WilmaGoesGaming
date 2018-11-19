@@ -27,7 +27,7 @@ public class AnimationScript : MonoBehaviour
     {
         if(debugWithSpace && Input.GetKeyDown(KeyCode.Space))
         {
-            StartEncounter();
+            //StartEncounter();
         }
     }
 
