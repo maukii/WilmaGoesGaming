@@ -7,6 +7,7 @@ public class PlayerInteraction : MonoBehaviour
 
     [SerializeField] List<GameObject> interactables = new List<GameObject>();
     [SerializeField] KeyCode actionKey = KeyCode.Space;
+    [SerializeField] GameObject Wilma;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -28,12 +29,21 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (Input.GetKeyDown(actionKey) && interactables.Count != 0 && !PlayerMovement.interacting)
         {
+            // interact with object
+
             for (int i = 0; i < interactables.Count; i++)
             {
                 PlayerMovement.interacting = true;
                 interactables[i].GetComponent<NPC>().TriggerConversation();
             }
         }
+        else if(Input.GetKeyDown(actionKey) && interactables.Count == 0 && !PlayerMovement.interacting)
+        {
+            // interact with Wilma
+            NPC[] scripts = Wilma.GetComponents<NPC>();
+            scripts[Random.Range(0, scripts.Length)].TriggerConversation();
+        }
+
         if (Input.GetKeyDown(actionKey) && PlayerMovement.interacting && DialogueManager.instance.sentenceReady)
         {
             DialogueManager.instance.NextSentence();

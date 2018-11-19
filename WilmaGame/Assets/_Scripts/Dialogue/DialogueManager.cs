@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour
 
     private float tempTypingSpeed;
 
+    public Animator dialogueUI;
+
     #endregion
 
     private void Awake()
@@ -40,7 +42,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartConversation(Dialogue dialogue)
     {
-        //make animation
+        dialogueUI.SetTrigger("Enter");
         PlayerMovement.interacting = true;
         nameText.text = dialogue.name;
 
@@ -85,7 +87,7 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
-        //make animation
+        dialogueUI.SetTrigger("Exit");
         PlayerMovement.interacting = false;
         sentenceReady = false;
         Debug.Log("End of conversation");
