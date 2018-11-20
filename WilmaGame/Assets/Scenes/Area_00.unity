@@ -24213,7 +24213,7 @@ MonoBehaviour:
     sentences:
     - "L\xF6ytyyk\xF6 repusta kaikki? Kirjat, kyn\xE4t, vihkot?"
     - "Olethan valmistautunut ensimm\xE4iseen koulup\xE4iv\xE4\xE4si?"
-    - "Tulet tapaamaan uusia yst\xE4vi\xE4 jotka auttvat sinua matkallasi - joten
+    - "Tulet tapaamaan uusia yst\xE4vi\xE4 jotka auttavat sinua matkallasi - joten
       alahan menn\xE4!"
 --- !u!58 &1963070351
 CircleCollider2D:

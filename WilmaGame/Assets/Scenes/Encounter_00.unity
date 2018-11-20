@@ -295,7 +295,7 @@ MonoBehaviour:
     - "P\xE4\xE4tit kertoa ongelmasta opettajallesi."
     - "H\xE4n puuttui asiaan ja vei ongelman eteenp\xE4in koululaisten vanhemmille
       - "
-    - "- jonka seurauksena asiaa puitiin yhdess\xE4 luokan kesken."
+    - "- mink\xE4 seurauksena asiaa puitiin yhdess\xE4 luokan kesken."
     - "Koulukiusaus p\xE4ihitettiin!"
   rightInfo:
     name: '  '
@@ -24289,6 +24289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a60dab6f13f734fa494a801e48b0e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstEnemy: 1
   winningIndex: 0
   levelToLoadIndex: 2
   encounter: {fileID: 356268993}
@@ -24837,8 +24838,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -750, y: 200}
-  m_SizeDelta: {x: 350, y: 150}
+  m_AnchoredPosition: {x: -660.7, y: 200}
+  m_SizeDelta: {x: 528.6, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1615113004
 MonoBehaviour:

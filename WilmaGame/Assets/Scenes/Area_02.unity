@@ -795,10 +795,10 @@ MonoBehaviour:
   dialogue:
     name: Opinto-ohjaaja Puna
     sentences:
-    - Hei! Tervetuloa Toiselle Asteelle! Olen Opinto-ohjaaja Puna.
+    - Olen opinto-ohjaajasi Puna, tervetuloa toiselle asteelle!
     - "Toisella asteella kohtaat erilaisia haasteita kuin aiemmin, mutta \xE4l\xE4
       huoli."
-    - "Maalaisj\xE4rjell\xE4 "
+    - Olemalla oma-aloitteinen ja aktiivinen voitat monet haasteet.
 --- !u!4 &773743883
 Transform:
   m_ObjectHideFlags: 0

@@ -304,9 +304,9 @@ MonoBehaviour:
     name: '  '
     sentences:
     - "Hait internetist\xE4 sek\xE4 koulutustapahtumista tietoa mahdollisista korkeakouluista."
-    - "Keskustelit my\xF6s opinto-ohjaajasi sek\xE4 vanhenpiesi kanssa tulevista opinnoistasi."
+    - "Keskustelit my\xF6s opinto-ohjaajasi sek\xE4 vanhempiesi kanssa tulevista opinnoistasi."
     - "Ep\xE4varmuus on heikentynyt!"
-    - "Hankalien asioiden kohtaaminen ratkaisee monet ongelmat - my\xF6s ep\xE4varmuuden!"
+    - "Vaikeiden asioiden kohtaaminen ratkaisee monet ongelmat - my\xF6s ep\xE4varmuuden!"
     - "Ep\xE4varmuus p\xE4ihitetty!"
   ui: {fileID: 0}
 --- !u!1 &369114773
@@ -24293,6 +24293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a60dab6f13f734fa494a801e48b0e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstEnemy: 0
   winningIndex: 1
   levelToLoadIndex: 3
   encounter: {fileID: 356268993}

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class EncounterUI : MonoBehaviour
 {
+    public bool firstEnemy = true;
+
     public int winningIndex = 0;
 
     AnimationScript AS;
@@ -123,8 +125,16 @@ public class EncounterUI : MonoBehaviour
 
         if(index == winningIndex)
         {
-            if(GameManager.instance != null)
+            if(GameManager.instance != null && firstEnemy)
+            {
                 GameManager.instance.firstEnemyWon = true;
+            }
+
+            if(!firstEnemy)
+            {
+                GameManager.instance.secondEnemyWon = true;
+            }
+            
         }
 
         ActLeft.gameObject.SetActive(false);

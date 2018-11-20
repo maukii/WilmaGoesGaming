@@ -378,6 +378,11 @@ Prefab:
       propertyPath: dialogue.sentences.Array.data[5]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114352921603431616, guid: 6e103d73e0ffb32439a64d71ed1db5bc,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Hei uusi koululainen! Olen opettajasi Sini, tervetuloa peruskouluun.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e103d73e0ffb32439a64d71ed1db5bc, type: 2}
   m_IsPrefabParent: 0
