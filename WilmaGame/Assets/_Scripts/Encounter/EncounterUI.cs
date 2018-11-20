@@ -204,8 +204,7 @@ public class EncounterUI : MonoBehaviour
                 break;
 
             case 2: // RUN
-                LevelChanger.instance.FadeOut(levelToLoadIndex);
-                print("tryna run");
+                ChooseRun();
                 break;
 
             default:
@@ -235,6 +234,12 @@ public class EncounterUI : MonoBehaviour
         Run.gameObject.SetActive(false);
 
         encounter.GetComponent<Enemy>().TriggerConversation();
+    }
+
+    public void ChooseRun()
+    {
+        PlayerMovement.interacting = false;
+        LevelChanger.instance.FadeOut(levelToLoadIndex);
     }
 
     public void ShowInfo(Dialogue dialogue)

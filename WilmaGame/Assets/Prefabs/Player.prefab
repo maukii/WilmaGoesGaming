@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b7826f3902ca74f8f1f2d6623e33c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMoveDiagonally: 0
+  canMoveDiagonally: 1
   movementSpeed: 3
   movingV: 0
   movingH: 0
