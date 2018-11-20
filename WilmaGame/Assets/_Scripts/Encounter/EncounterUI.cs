@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,13 +8,18 @@ public class EncounterUI : MonoBehaviour
 {
     AnimationScript AS;
 
+    public int levelToLoadIndex = 2;
     public GameObject encounter;
 
-    public Text Action, Investigate, Run, Info;
-    private string actionTemp, investigateTemp, runTemp;
+    public Text Action, Investigate, Run;
+    public Text Info;
+    public Text ActLeft, ActRight;
 
+    private string actionTemp, investigateTemp, runTemp;
+    private string leftTemp, rightTemp;
     public float typingSpeed;
     public int index;
+    public bool choosingAction;
 
     bool canInteract;
     float timer = 0.15f;
@@ -27,16 +33,19 @@ public class EncounterUI : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
-
-        Info.text = "";
-
         AS = GetComponent<AnimationScript>();
 
-        tempTime = timer;
+        ActLeft.gameObject.SetActive(false);
+        ActRight.gameObject.SetActive(false);
 
+        Info.text = "";
+        tempTime = timer;
         actionTemp = Action.text;
         investigateTemp = Investigate.text;
         runTemp = Run.text;
+
+        leftTemp = ActLeft.text;
+        rightTemp = ActRight.text;
 
         ChangeNode(); // do this so ">" shows before getting 1st input
     }
@@ -55,7 +64,7 @@ public class EncounterUI : MonoBehaviour
                 }
             }
 
-            if(!chosen)
+            if(!chosen && !choosingAction)
             {
                 if (Input.GetAxisRaw("Horizontal") < 0 && canInteract)
                 {
@@ -70,24 +79,83 @@ public class EncounterUI : MonoBehaviour
                     ChangeNode();
                 }
             }
+            else if(choosingAction)
+            {
+                if (Input.GetAxisRaw("Horizontal") != 0 && canInteract)
+                {
+                    index++;
+                    canInteract = false;
+                    ChangeAction();
+                }
+            }
 
             if (Input.GetKeyDown(KeyCode.Space) && !chosen && !infoReady)
             {
+                canInteract = false;
                 chosen = true;
                 StopAllCoroutines();
                 Choose();
             }
-            else if(Input.GetKeyDown(KeyCode.Space) && infoReady)
+            else if(Input.GetKeyDown(KeyCode.Space) && infoReady && canInteract)
             {
                 NextSentence();
+            }
+
+            if(Input.GetKeyDown(KeyCode.Space) && choosingAction && canInteract)
+            {
+                ChooseActionChoise();
             }
 
         }
     }
 
+    private void ChooseActionChoise()
+    {
+        if(index == 0)
+        {
+            encounter.GetComponent<ActTexts>().LeftChoise();
+        }
+        else
+        {
+            encounter.GetComponent<ActTexts>().RightChoise();
+        }
+
+        ActLeft.gameObject.SetActive(false);
+        ActRight.gameObject.SetActive(false);
+
+        choosingAction = false;
+        chosen = false;
+    }
+
+    void ChangeAction()
+    {
+        canInteract = false;
+
+        if (index > 1)
+        {
+            index = 0;
+        }
+        else if (index < 0)
+        {
+            index = 1;
+        }
+
+        switch(index)
+        {
+            case 0:
+                ActLeft.text = "> " + leftTemp;
+                ActRight.text = rightTemp;
+                break;
+
+            case 1:
+                ActLeft.text = leftTemp;
+                ActRight.text = "> " + rightTemp;
+                break;
+        }
+    }
+
     void ChangeNode()
     {
-
         if (index > 2)
         {
             index = 0;
@@ -128,18 +196,15 @@ public class EncounterUI : MonoBehaviour
         switch (index)
         {
             case 0: // action
-
+                ChooseAction();
                 break;
 
             case 1: // investigate
-                Action.gameObject.SetActive(false);
-                Investigate.gameObject.SetActive(false);
-                Run.gameObject.SetActive(false);
-
-                encounter.GetComponent<Enemy>().TriggerConversation();
+                ChooseInvestigate();
                 break;
 
             case 2: // RUN
+                LevelChanger.instance.FadeOut(levelToLoadIndex);
                 print("tryna run");
                 break;
 
@@ -147,6 +212,29 @@ public class EncounterUI : MonoBehaviour
                 print("choosing index broke");
                 break;
         }
+    }
+
+    public void ChooseAction()
+    {
+        choosingAction = true;
+
+        ActLeft.gameObject.SetActive(true);
+        ActRight.gameObject.SetActive(true);
+
+        Action.gameObject.SetActive(false);
+        Investigate.gameObject.SetActive(false);
+        Run.gameObject.SetActive(false);
+
+        ChangeAction();
+    }
+
+    public void ChooseInvestigate()
+    {
+        Action.gameObject.SetActive(false);
+        Investigate.gameObject.SetActive(false);
+        Run.gameObject.SetActive(false);
+
+        encounter.GetComponent<Enemy>().TriggerConversation();
     }
 
     public void ShowInfo(Dialogue dialogue)
