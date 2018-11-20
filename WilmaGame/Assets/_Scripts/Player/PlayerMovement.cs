@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public static bool interacting = false;
 
+    public GameObject spawn1, spawn2;
+
     [SerializeField] bool canMoveDiagonally = false;
     [SerializeField] float movementSpeed = 3f;
 
@@ -20,6 +22,27 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         anim = GetComponentInChildren<Animator>();
+    }
+
+    void Start()
+    {
+        if(GameManager.instance.firstEnemyWon)
+        {
+            if(spawn1 != null)
+            {
+                transform.position = spawn1.transform.position;
+                Camera.main.transform.position = spawn1.transform.position;
+            }
+        }
+
+        if(GameManager.instance.secondEnemyWon)
+        {
+            if(spawn2 != null)
+            {
+                transform.position = spawn2.transform.position;
+                Camera.main.transform.position = spawn2.transform.position;
+            }
+        }
     }
 
     void FixedUpdate()

@@ -29,14 +29,19 @@ public class StartEncounter : MonoBehaviour
                 dead = GameManager.instance.secondEnemyWon;
                 break;
         }
-        
+
+        if (dead && !fading)
+        {
+            StartCoroutine(Die());
+        }
+
     }
 
     IEnumerator Die()
     {
         fading = true;
 
-        for (float f = 1; f >= -0.05f; f -= 0.05f)
+        for (float f = 1; f >= -0.01f; f -= 0.01f)
         {
             Color c = sr.material.color;
             c.a = f;
@@ -52,13 +57,6 @@ public class StartEncounter : MonoBehaviour
         {
             PlayerMovement.interacting = true;
             Camera.main.GetComponent<CameraBattleTransition>().StartEncounter(1, 0, 1, LevelToLoad);
-        }
-        else
-        {
-            if(!fading)
-            {
-                StartCoroutine(Die());
-            }
         }
     }
 

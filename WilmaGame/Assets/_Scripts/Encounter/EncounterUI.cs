@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class EncounterUI : MonoBehaviour
 {
+    public int winningIndex = 0;
+
     AnimationScript AS;
 
     public int levelToLoadIndex = 2;
@@ -25,7 +27,7 @@ public class EncounterUI : MonoBehaviour
     float timer = 0.15f;
     float tempTime;
 
-    bool infoReady = false;
+    public bool infoReady = false;
     public bool chosen = false;
 
     public Queue<string> sentences;
@@ -100,8 +102,7 @@ public class EncounterUI : MonoBehaviour
             {
                 NextSentence();
             }
-
-            if(Input.GetKeyDown(KeyCode.Space) && choosingAction && canInteract)
+            else if(Input.GetKeyDown(KeyCode.Space) && choosingAction && canInteract)
             {
                 ChooseActionChoise();
             }
@@ -120,11 +121,15 @@ public class EncounterUI : MonoBehaviour
             encounter.GetComponent<ActTexts>().RightChoise();
         }
 
+        if(index == winningIndex)
+        {
+            if(GameManager.instance != null)
+                GameManager.instance.firstEnemyWon = true;
+        }
+
         ActLeft.gameObject.SetActive(false);
         ActRight.gameObject.SetActive(false);
 
-        choosingAction = false;
-        chosen = false;
     }
 
     void ChangeAction()
@@ -248,6 +253,7 @@ public class EncounterUI : MonoBehaviour
 
         foreach (string sentence in dialogue.sentences)
         {
+            Debug.Log(sentence);
             sentences.Enqueue(sentence);
         }
 
@@ -293,6 +299,12 @@ public class EncounterUI : MonoBehaviour
 
         Info.gameObject.SetActive(false);
         chosen = false;
+
+        if(choosingAction)
+        {
+            PlayerMovement.interacting = false;
+            LevelChanger.instance.FadeOut(levelToLoadIndex);
+        }
     }
 
 }
