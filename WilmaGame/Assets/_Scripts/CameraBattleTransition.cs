@@ -24,15 +24,12 @@ public class CameraBattleTransition : MonoBehaviour {
         }
     }
 
-    void Update()
+    public void StartEncounter(float duration, float from, float to, int sceneIndex)
     {
-        if(Input.GetKeyDown(KeyCode.K))
-        {
-            StartCoroutine(Transition(1, 0, 1));
-        }
+        StartCoroutine(Transition(duration, from, to, sceneIndex));
     }
 
-    public IEnumerator Transition(float duration, float from, float to)
+    IEnumerator Transition(float duration, float from, float to, int sceneIndex)
     {
         float percent = 0;
 
@@ -45,8 +42,8 @@ public class CameraBattleTransition : MonoBehaviour {
 
         } while (percent < 1);
 
-        // load level here
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
+        SceneManager.LoadScene(sceneIndex);
     }
 
     void OnRenderImage(RenderTexture source, RenderTexture destination)
