@@ -10,7 +10,11 @@ public class Door : MonoBehaviour
 
     public void ChangeLevel(int index)
     {
-        Debug.Log("fade");
+        LevelChanger.instance.FadeOut(index);
+    }
+
+    public void ChangeLevelTo(int index)
+    {
         SceneManager.LoadScene(index);
     }
 
