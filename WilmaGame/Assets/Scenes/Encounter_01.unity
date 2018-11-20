@@ -24294,7 +24294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winningIndex: 1
-  levelToLoadIndex: 2
+  levelToLoadIndex: 3
   encounter: {fileID: 356268993}
   Action: {fileID: 598897749}
   Investigate: {fileID: 369114775}

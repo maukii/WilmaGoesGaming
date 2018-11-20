@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Encounter_00.unity
     guid: c0eb8effd9419914397cb51b50528815
   - enabled: 1
+    path: Assets/Scenes/Encounter_01.unity
+    guid: a54551228352f8149a3c92c20aa85bd5
+  - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 9ca817cea89b77e4ba981c3d718672b4
   - enabled: 1

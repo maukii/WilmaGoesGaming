@@ -710,6 +710,16 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114269773803332168, guid: 249849f230c1c814c9d6000177969403,
+        type: 2}
+      propertyPath: index
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114269773803332168, guid: 249849f230c1c814c9d6000177969403,
+        type: 2}
+      propertyPath: LevelToLoad
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 249849f230c1c814c9d6000177969403, type: 2}
   m_IsPrefabParent: 0
@@ -58584,7 +58594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fabdc9c2253fc14aa0f495bb4c62f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndexToLoad: 5
+  levelIndexToLoad: 6
 --- !u!61 &1893000417
 BoxCollider2D:
   m_ObjectHideFlags: 0
