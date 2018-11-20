@@ -705,6 +705,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212956090104462816, guid: 249849f230c1c814c9d6000177969403,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 249849f230c1c814c9d6000177969403, type: 2}
   m_IsPrefabParent: 0
@@ -58044,6 +58049,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114406688399254522, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114610203768490112, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114469301357383804, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4894379094958450, guid: f66524e1227f51947b0bba1660ced298, type: 2}
       propertyPath: m_LocalPosition.x
       value: -5.84
@@ -58079,7 +58099,7 @@ Prefab:
     - target: {fileID: 114406688399254522, guid: f66524e1227f51947b0bba1660ced298,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: Area 3
+      value: Uusi alue - uudet haasteet!
       objectReference: {fileID: 0}
     - target: {fileID: 114406688399254522, guid: f66524e1227f51947b0bba1660ced298,
         type: 2}
@@ -58094,13 +58114,43 @@ Prefab:
     - target: {fileID: 114610203768490112, guid: f66524e1227f51947b0bba1660ced298,
         type: 2}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: Area 3
+      value: "Vaikket tiet\xE4isi vastausta, \xE4l\xE4 luovuta -"
       objectReference: {fileID: 0}
     - target: {fileID: 114092534156720984, guid: f66524e1227f51947b0bba1660ced298,
         type: 2}
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 1383263810}
+    - target: {fileID: 114610203768490112, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "l\xF6yd\xE4t vastauksen varmasti!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114610203768490112, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: AAAAAAAAA
+      objectReference: {fileID: 0}
+    - target: {fileID: 114469301357383804, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Hei!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114469301357383804, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: Hei!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114469301357383804, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: Hei!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114469301357383804, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: "Menn\xE4\xE4n!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f66524e1227f51947b0bba1660ced298, type: 2}
   m_IsPrefabParent: 0
@@ -58627,7 +58677,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: ce3a2b8bf32bdb74c909c852360f7408, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

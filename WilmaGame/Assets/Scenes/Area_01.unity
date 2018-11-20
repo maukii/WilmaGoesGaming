@@ -1365,6 +1365,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114406688399254522, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114610203768490112, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114469301357383804, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4894379094958450, guid: f66524e1227f51947b0bba1660ced298, type: 2}
       propertyPath: m_LocalPosition.x
       value: -13.6
@@ -1402,6 +1417,46 @@ Prefab:
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 405326960}
+    - target: {fileID: 114406688399254522, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: wasd
+      objectReference: {fileID: 0}
+    - target: {fileID: 114406688399254522, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: qwerty
+      objectReference: {fileID: 0}
+    - target: {fileID: 114610203768490112, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "yrit\xE4 uudelleen!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114610203768490112, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: AAAAAAAAA
+      objectReference: {fileID: 0}
+    - target: {fileID: 114406688399254522, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "\xC4l\xE4 j\xE4\xE4 ongelmiesi kanssa yksin - muut ovat tukenasi!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114610203768490112, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Ei haittaa vaikka et onnistuisi heti -
+      objectReference: {fileID: 0}
+    - target: {fileID: 114469301357383804, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Muista juoda p\xE4iv\xE4n aikana runsaasti vett\xE4."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114469301357383804, guid: f66524e1227f51947b0bba1660ced298,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "N\xE4in pysyt virke\xE4n\xE4!"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f66524e1227f51947b0bba1660ced298, type: 2}
   m_IsPrefabParent: 0
