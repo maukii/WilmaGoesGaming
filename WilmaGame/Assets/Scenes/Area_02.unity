@@ -569,7 +569,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4798370786577652, guid: 7445636de0acc464cb08d53383272afb, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114844361768402646, guid: 7445636de0acc464cb08d53383272afb,
         type: 2}
@@ -633,6 +633,48 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.4, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &660430709
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4301402629896468, guid: 249849f230c1c814c9d6000177969403, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 23.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301402629896468, guid: 249849f230c1c814c9d6000177969403, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301402629896468, guid: 249849f230c1c814c9d6000177969403, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301402629896468, guid: 249849f230c1c814c9d6000177969403, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301402629896468, guid: 249849f230c1c814c9d6000177969403, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301402629896468, guid: 249849f230c1c814c9d6000177969403, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301402629896468, guid: 249849f230c1c814c9d6000177969403, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301402629896468, guid: 249849f230c1c814c9d6000177969403, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 249849f230c1c814c9d6000177969403, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &773743879
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,12 +745,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Luokanvalvoja Puna
+    name: Opinto-ohjaaja Puna
     sentences:
-    - Hei! Tervetuloa toiselle asteelle! Olen luokanvalvojasi Puna.
+    - Hei! Tervetuloa Toiselle Asteelle! Olen Opinto-ohjaaja Puna.
     - "Toisella asteella kohtaat erilaisia haasteita kuin aiemmin, mutta \xE4l\xE4
       huoli."
-    - "Olet selvinnyt jo n\xE4in pitk\xE4lle, jaksa viel\xE4!"
+    - "Maalaisj\xE4rjell\xE4 "
 --- !u!4 &773743883
 Transform:
   m_ObjectHideFlags: 0
@@ -721,7 +763,7 @@ Transform:
   m_Children:
   - {fileID: 1921411869}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &940515173
 Prefab:
@@ -57999,7 +58041,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4894379094958450, guid: f66524e1227f51947b0bba1660ced298, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114406688399254522, guid: f66524e1227f51947b0bba1660ced298,
         type: 2}
@@ -58357,7 +58399,7 @@ Transform:
   - {fileID: 1217821492}
   - {fileID: 1893000415}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1585410139 stripped
 GameObject:
